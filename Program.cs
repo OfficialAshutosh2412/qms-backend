@@ -48,7 +48,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 //registering connection string and appdbcontext
-builder.Services.AddDbContext<AppDbContext>(m => m.UseSqlServer(builder.Configuration.GetConnectionString("dbcs")));
+builder.Services.AddDbContext<AppDbContext>(m => m.UseNpgsql(builder.Configuration.GetConnectionString("dbcs")));
 
 //registering identity
 builder.Services.AddIdentity<AppUser, IdentityRole>(option =>
