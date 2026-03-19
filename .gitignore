@@ -1,0 +1,46 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# ASP.NET Core
+appsettings.Development.json
+
+# Environment variables
+.env
+
+# Publish output
+publish/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# EF Core migrations snapshot temp (keep migrations, ignore temp)
+*.tmp
+
+# Azure
+*.PublishSettings
+
+# Secrets
+secrets.json
+
+# Node (if any frontend inside backend)
+node_modules/
+
+# coverage
+coverage/

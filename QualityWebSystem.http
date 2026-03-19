@@ -1,0 +1,6 @@
+@QualityWebSystem_HostAddress = http://localhost:5078
+
+GET {{QualityWebSystem_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
