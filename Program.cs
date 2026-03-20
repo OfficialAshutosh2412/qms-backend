@@ -174,10 +174,11 @@ app.UseCors("AllowReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Urls.Add($"http://*:{port}");
+
 app.MapControllers();
 
 app.MapHub<AdminReviewAlertHub>("/adminReviewAlertHub");
-var port = Environment.GetEnvironmentVariable("PORT") ?? "10000";
-app.Urls.Add($"http://0.0.0.0:{port}");
-
+app.MapGet("/", () => "API is running...");
 app.Run();
